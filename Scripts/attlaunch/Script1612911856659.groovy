@@ -23,7 +23,9 @@ WebUI.navigateToUrl('https://www.att.com/')
 
 WebUI.waitForPageLoad(5)
 
-WebUI.waitForAngularLoad(100)
+WebUI.waitForElementClickable(findTestObject('AttLogo'), 60)
+
+WS.sendRequest(findTestObject('attAPI'))
 
 WebUI.closeBrowser()
 
